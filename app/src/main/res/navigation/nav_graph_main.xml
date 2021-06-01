@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph_main"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.retrofit.ui.HomeFragment"
+        android:label="News Feed">
+        <action
+            android:id="@+id/action_to_detail_fragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.retrofit.ui.DetailFragment"
+        android:label="">
+
+        <argument
+            android:name="article"
+            app:argType="com.example.retrofit.data.model.Article" />
+
+    </fragment>
+</navigation>
